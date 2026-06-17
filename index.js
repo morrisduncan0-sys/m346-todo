@@ -45,20 +45,20 @@ app.get('/', async (req, res) => {
       <meta charset="UTF-8"/>
       <title>M346 To-Do App</title>
       <style>
-        body { font-family: sans-serif; max-width: 600px; margin: 60px auto; padding: 0 20px; background: #f5f5f5; }
+        body { font-family: sans-serif; max-width: 600px; margin: 60px auto; padding: 0 20px; background: white; }
         h1 { color: #333; }
-        .card { background: white; border-radius: 10px; padding: 24px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .card { background: white; border-radius: 10px; padding: 24px; box-shadow: 0 2px 8px black; }
         input[type=text] { width: 70%; padding: 8px; border: 1px solid #ccc; border-radius: 6px; }
-        button { padding: 8px 14px; border: none; border-radius: 6px; cursor: pointer; background: #0ea5e9; color: white; }
+        button { padding: 8px 14px; border: none; border-radius: 6px; cursor: pointer; background: cyan; color: white; }
         ul { list-style: none; padding: 0; margin-top: 20px; }
-        .badge { background: #0ea5e9; color: white; font-size: 12px; padding: 2px 10px; border-radius: 999px; }
+        .badge { background: cyan; color: white; font-size: 12px; padding: 2px 10px; border-radius: 999px; }
       </style>
     </head>
     <body>
       <div class="card">
-        <h1>📝 To-Do App <span class="badge">M346 LB3</span></h1>
+        <h1>To-Do App <span class="badge">M346 LB3</span></h1>
         <form method="POST" action="/add">
-          <input type="text" name="text" placeholder="Neue Aufgabe..." required/>
+          <input type="text" name="text" placeholder="Neue Aufgabe z.B Liliana Date vorbereiten" required/>
           <button type="submit">Hinzufügen</button>
         </form>
         <ul>${listItems || '<li style="color:#aaa">Noch keine Todos.</li>'}</ul>
